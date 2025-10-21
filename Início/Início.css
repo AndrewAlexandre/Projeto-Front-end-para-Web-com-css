@@ -1,0 +1,268 @@
+/* ===== RESET E CONFIGURAÇÕES GERAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%); /* Gradiente suave em cinza */
+    background-attachment: fixed;
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%); /* Gradiente preto */
+    color: white;
+    padding: 1.5rem 0;
+    border-bottom: 4px solid #666;
+    position: relative;
+}
+
+header::before {
+    content: "🐱🐾🐱🐾";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1rem;
+    opacity: 0.3;
+    letter-spacing: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* ===== MENU DE NAVEGAÇÃO ===== */
+nav {
+    background: linear-gradient(135deg, #404040 0%, #2d2d2d 100%);
+    padding: 0.8rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+    margin: 1.5rem 0;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-left: 5px solid #2d2d2d;
+    position: relative;
+}
+
+section::before {
+    content: "🐱";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background: #2d2d2d;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+}
+
+h2 {
+    color: #2d2d2d;
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+/* ===== PARÁGRAFOS E TEXTOS ===== */
+p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #444;
+    text-align: justify;
+}
+
+/* ===== LISTAS ===== */
+ul {
+    margin: 1.2rem 0;
+    padding-left: 2rem;
+}
+
+li {
+    margin-bottom: 0.8rem;
+    padding-left: 0.5rem;
+    position: relative;
+}
+
+li::before {
+    content: "🐾";
+    position: absolute;
+    left: -1.5rem;
+    opacity: 0.7;
+}
+
+/* ===== SEÇÃO DE ENDEREÇO ===== */
+address {
+    background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
+    padding: 2rem;
+    border-radius: 10px;
+    font-style: normal;
+    border: 2px dashed #666;
+    text-align: center;
+}
+
+address h2 {
+    color: #2d2d2d;
+    border-bottom: none;
+    margin-bottom: 1.5rem;
+}
+
+address h2::after {
+    content: "💛";
+    margin-left: 10px;
+}
+
+address p {
+    background: white;
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-top: 4px solid #666;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* ===== DESTAQUES ESPECIAIS ===== */
+/* Primeira seção com destaque diferente */
+section:first-of-type {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+    border-left: 5px solid #666;
+}
+
+/* Último h2 da seção de histórias */
+section:nth-child(3) h2:last-of-type {
+    text-align: center;
+    color: #2d2d2d;
+    font-style: italic;
+    background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+    padding: 1.2rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    border: 2px solid #ddd;
+}
+
+section:nth-child(3) h2:last-of-type::before {
+    content: "🎉";
+    margin-right: 10px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    body {
+        padding: 0 0.5rem;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    header::before {
+        font-size: 0.8rem;
+        letter-spacing: 5px;
+    }
+    
+    nav ul {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav a {
+        padding: 0.8rem 1.2rem;
+        display: block;
+        width: 200px;
+        text-align: center;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+    
+    section {
+        padding: 1.5rem;
+        margin: 1.2rem 0;
+    }
+    
+    section::before {
+        left: 15px;
+        top: -8px;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+    
+    li::before {
+        left: -1.2rem;
+    }
+}
+
+/* ===== EFEITOS DE HOVER SUAVES ===== */
+section {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
