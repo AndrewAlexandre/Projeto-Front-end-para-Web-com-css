@@ -9,53 +9,82 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
-    background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%); /* Gradiente suave em cinza */
+    background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
     background-attachment: fixed;
 }
 
-/* ===== CABEÇALHO ===== */
+/* ===== CABEÇALHO LIMPO E UNIFICADO (TOPO) ===== */
 header {
-    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%); /* Gradiente preto */
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
     color: white;
-    padding: 1.5rem 0;
     border-bottom: 4px solid #666;
     position: relative;
-}
-
-header::before {
-    content: "🐱🐾🐱🐾";
-    position: absolute;
-    top: 10px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    font-size: 1rem;
-    opacity: 0.3;
-    letter-spacing: 10px;
-}
-
-h1 {
-    text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-/* ===== MENU DE NAVEGAÇÃO ===== */
-nav {
-    background: linear-gradient(135deg, #404040 0%, #2d2d2d 100%);
-    padding: 0.8rem 0;
-}
-
-nav ul {
-    list-style: none;
+    padding: 0; 
+    
+    /* 1. FLEXBOX: Transforma o header em container */
     display: flex;
-    justify-content: center;
-    gap: 2rem;
+    /* 2. EMPILHAMENTO: Coloca a logo-area e a nav uma abaixo da outra */
+    flex-direction: column;
+    /* 3. CENTRALIZAÇÃO: Centraliza todos os blocos (logo-area e nav) HORIZONTALMENTE */
+    align-items: center; 
+}
+
+/* ---------------------------------------------------- */
+/* ESTILOS PARA A ÁREA DO LOGO E TÍTULO (Linha de cima) */
+/* ---------------------------------------------------- */
+.logo-area {
+    /* Faz o logo e h1 ficarem um ao lado do outro */
+    display: flex; 
+    align-items: center;
+    
+    /* Espaçamento em torno do logo e h1 */
+    padding: 1.5rem 1rem 0.5rem 1rem; 
+}
+
+/* Estilo do Logo */
+.logo-h1 {
+    width: 35px; 
+    height: 35px;
+    margin-right: 15px; 
+}
+
+/* Estilo do Título H1 */
+.logo-area h1 {
+    font-size: 1.8rem;
+    margin: 0; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Mantido do seu estilo */
+}
+
+
+/* ---------------------------------------------------- */
+/* ESTILOS PARA A NAVEGAÇÃO (Linha de baixo) - AGORA SÓ USA A CLASSE .main-nav */
+/* ---------------------------------------------------- */
+.main-nav {
+    /* Define a margem para separar do h1/logo-area */
+    margin-top: 10px; 
+    /* Adiciona padding na parte inferior do header */
+    padding-bottom: 1rem; 
+    width: 100%; 
+    
+    /* Estilo de fundo para a área dos botões (opcional, mas mantém o visual) */
+    background: linear-gradient(135deg, #404040 0%, #2d2d2d 100%);
+    padding: 0.8rem 0; /* Padding interno para dar altura ao nav */
+}
+
+.main-nav ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0; /* Remove margens do ul para centralização perfeita */
+    
+    /* FAZ OS BOTÕES FICAREM LADO A LADO E CENTRALIZADOS */
+    display: flex;
+    justify-content: center; /* <<< CENTRALIZA O MENU */
+    gap: 2rem; 
     flex-wrap: wrap;
 }
 
-nav a {
+.main-nav li a {
+    /* Estilo dos seus botões */
     color: white;
     text-decoration: none;
     padding: 0.6rem 1.5rem;
@@ -66,11 +95,17 @@ nav a {
     border: 1px solid rgba(255,255,255,0.2);
 }
 
-nav a:hover {
+.main-nav li a:hover {
     background: rgba(255,255,255,0.2);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
+
+/* ---------------------------------------------------- */
+/* OUTROS ESTILOS DA PÁGINA (Mantidos e Otimizados)      */
+/* ---------------------------------------------------- */
+
+/* Removido o h1 solto que estava causando conflito */
 
 /* ===== CONTEÚDO PRINCIPAL ===== */
 main {
@@ -87,6 +122,12 @@ section {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     border-left: 5px solid #2d2d2d;
     position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
 section::before {
@@ -129,7 +170,7 @@ li {
 }
 
 li::before {
-    content: "🐾";
+    content: "🐈";
     position: absolute;
     left: -1.5rem;
     opacity: 0.7;
@@ -183,13 +224,11 @@ footer p {
 }
 
 /* ===== DESTAQUES ESPECIAIS ===== */
-/* Primeira seção com destaque diferente */
 section:first-of-type {
     background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
     border-left: 5px solid #666;
 }
 
-/* Último h2 da seção de histórias */
 section:nth-child(3) h2:last-of-type {
     text-align: center;
     color: #2d2d2d;
@@ -212,22 +251,27 @@ section:nth-child(3) h2:last-of-type::before {
         padding: 0 0.5rem;
     }
     
-    h1 {
-        font-size: 1.8rem;
+    .logo-area h1 {
+        font-size: 1.5rem; /* Ajuste para caber em telas menores */
     }
     
-    header::before {
-        font-size: 0.8rem;
-        letter-spacing: 5px;
+    .logo-area {
+        /* Garante que o logo/h1 fiquem um abaixo do outro em telas muito pequenas */
+        flex-direction: column;
+        text-align: center;
     }
-    
-    nav ul {
+    .logo-h1 {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .main-nav ul {
         gap: 1rem;
         flex-direction: column;
-        align-items: center;
+        align-items: center; /* Centraliza botões empilhados */
     }
     
-    nav a {
+    .main-nav li a {
         padding: 0.8rem 1.2rem;
         display: block;
         width: 200px;
@@ -255,14 +299,4 @@ section:nth-child(3) h2:last-of-type::before {
     li::before {
         left: -1.2rem;
     }
-}
-
-/* ===== EFEITOS DE HOVER SUAVES ===== */
-section {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-section:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }

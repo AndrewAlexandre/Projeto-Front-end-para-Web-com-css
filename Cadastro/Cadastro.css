@@ -1,1 +1,177 @@
-aaaaa
+/* ===== RESET E CONFIGURAÇÕES GERAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+    background-attachment: fixed;
+}
+
+/* ===== CABEÇALHO (LOGO E NAV) ===== */
+header {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    color: white;
+    border-bottom: 4px solid #666;
+    position: relative;
+    padding: 0; 
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza tudo horizontalmente */
+}
+
+/* ---------------------------------------------------- */
+/* ÁREA DO LOGO E TÍTULO (Topo) */
+/* ---------------------------------------------------- */
+.logo-area {
+    display: flex; 
+    align-items: center;
+    padding: 1.5rem 1rem 0.5rem 1rem; 
+}
+
+.logo-h1 {
+    width: 35px; 
+    height: 35px;
+    margin-right: 15px; 
+}
+
+.logo-area h1 {
+    font-size: 1.8rem;
+    margin: 0; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+
+/* ---------------------------------------------------- */
+/* NAVEGAÇÃO (Menu de links) */
+/* ---------------------------------------------------- */
+.main-nav {
+    margin-top: 10px; 
+    padding-bottom: 1rem; 
+    width: 100%; 
+    background: linear-gradient(135deg, #404040 0%, #2d2d2d 100%);
+    padding: 0.8rem 0; 
+}
+
+.main-nav ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0; 
+    
+    display: flex;
+    justify-content: center; /* CENTRALIZA OS BOTÕES */
+    gap: 2rem; 
+    flex-wrap: wrap;
+}
+
+.main-nav li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.main-nav li a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* ===== CONTEÚDO PRINCIPAL E FORMULÁRIO ===== */
+main {
+    max-width: 800px; /* Limita a largura do conteúdo principal */
+    margin: 2rem auto; /* Centraliza o main na página */
+    padding: 2rem;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.cadastro-info h2 {
+    color: #2d2d2d;
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.cadastro-info p {
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+/* Estilos do Formulário */
+form {
+    padding-top: 2rem;
+    border-top: 1px dashed #ccc;
+    display: grid;
+    gap: 15px; /* Espaço entre os elementos do grid */
+}
+
+label {
+    font-weight: bold;
+    color: #2d2d2d;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+    width: 100%; /* Ocupa a largura total do container do formulário */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical; /* Permite redimensionar apenas verticalmente */
+}
+
+button[type="submit"] {
+    background: linear-gradient(135deg, #0d7416 0%, #0d7416 100%); /* Cor de destaque (Rosa/Vermelho) */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    justify-self: center; /* Centraliza o botão no grid */
+    width: 50%; /* Faz o botão ter uma largura limitada para parecer mais centralizado */
+    max-width: 300px;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(9, 237, 88, 0.4);
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-top: 4px solid #666;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-size: 1rem;
+}
