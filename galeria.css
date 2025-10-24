@@ -1,0 +1,371 @@
+/* ===== RESET E CONFIGURAÇÕES GERAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    color: white;
+    border-bottom: 4px solid #666;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 1rem 0.5rem 1rem;
+    text-align: center;
+}
+
+.logo-h1 {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.logo-area h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.main-nav {
+    margin-top: 10px;
+    padding-bottom: 1rem;
+    width: 100%;
+    background: linear-gradient(135deg, #404040 0%, #2d2d2d 100%);
+    padding: 0.8rem 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.main-nav li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.main-nav li a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ===== INTRODUÇÃO DA GALERIA ===== */
+.intro-galeria {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.intro-galeria h2 {
+    color: #2d2d2d;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.intro-galeria p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ===== GALERIA DE GATOS ===== */
+.galeria-gatos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.card-gato {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 3px solid #ffd54f;
+}
+
+.card-gato:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.foto-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+.foto-gato {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-gato:hover .foto-gato {
+    transform: scale(1.05);
+}
+
+.info-gato {
+    padding: 1.5rem;
+}
+
+.info-gato h3 {
+    color: #2d2d2d;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: 2px solid #ffd54f;
+    padding-bottom: 0.5rem;
+}
+
+.historia {
+    color: #555;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.adotado {
+    display: block;
+    background: #4CAF50;
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+/* ===== CHAMADA PARA AÇÃO ===== */
+.chamada-acao {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+    border-radius: 15px;
+    margin-top: 3rem;
+    border: 3px solid #ffd54f;
+}
+
+.chamada-acao h2 {
+    color: #2d2d2d;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.chamada-acao p {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.botao-adoção {
+    display: inline-block;
+    background: linear-gradient(135deg, #0d7416 0%, #0a5c10 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.botao-adoção:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(9, 237, 88, 0.4);
+    background: linear-gradient(135deg, #0f8c1a 0%, #0c6d14 100%);
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    border-top: 4px solid #666;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .logo-area h1 {
+        font-size: 1.5rem;
+    }
+    
+    .logo-area {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .logo-h1 {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .main-nav ul {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .main-nav li a {
+        padding: 0.8rem 1.2rem;
+        display: block;
+        width: 200px;
+        text-align: center;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+    
+    .intro-galeria {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .intro-galeria h2 {
+        font-size: 1.8rem;
+    }
+    
+    .galeria-gatos {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .card-gato {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+    
+    .foto-container {
+        height: 200px;
+    }
+    
+    .chamada-acao {
+        padding: 2rem 1rem;
+        margin-top: 2rem;
+    }
+    
+    .chamada-acao h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 0.5rem;
+    }
+    
+    .intro-galeria {
+        padding: 1rem;
+    }
+    
+    .intro-galeria h2 {
+        font-size: 1.5rem;
+    }
+    
+    .intro-galeria p {
+        font-size: 1rem;
+    }
+    
+    .galeria-gatos {
+        gap: 1rem;
+    }
+    
+    .info-gato {
+        padding: 1rem;
+    }
+    
+    .info-gato h3 {
+        font-size: 1.3rem;
+    }
+    
+    .chamada-acao {
+        padding: 1.5rem 1rem;
+    }
+    
+    .botao-adoção {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-gato {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.card-gato:nth-child(1) { animation-delay: 0.1s; }
+.card-gato:nth-child(2) { animation-delay: 0.2s; }
+.card-gato:nth-child(3) { animation-delay: 0.3s; }
+.card-gato:nth-child(4) { animation-delay: 0.4s; }
+.card-gato:nth-child(5) { animation-delay: 0.5s; }
