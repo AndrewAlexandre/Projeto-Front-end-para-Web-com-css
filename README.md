@@ -26,8 +26,7 @@ CEP: 00000-000.
 
 📄 Estrutura de Arquivos
 O projeto é organizado com a separação clássica de preocupações (Separation of Concerns):
-
-<img width="794" height="293" alt="image" src="https://github.com/user-attachments/assets/df75c12b-726a-4bb4-a2bc-bfaf00f069da" />
+![Imagem do WhatsApp de 2025-10-24 à(s) 22 15 37_ce822107](https://github.com/user-attachments/assets/bc6a5642-4e17-4a63-9972-6e3c3f24f003)
 
 🗺️ Mapa de Páginas
 Arquivo HTML	Conteúdo Principal	Destaques
