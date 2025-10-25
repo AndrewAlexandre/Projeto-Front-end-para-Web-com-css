@@ -26,19 +26,7 @@ CEP: 00000-000.
 
 📄 Estrutura de Arquivos
 O projeto é organizado com a separação clássica de preocupações (Separation of Concerns):
-Projeto-Front-end-para-Web-com-css/
-├── CSS/
-│   ├── Cadastro.css      # Estilos para o formulário
-│   ├── galeria.css       # Estilos para a galeria (usa CSS Grid)
-│   ├── index.css         # Estilos para a página inicial
-│   └── Projeto.css       # Estilos para a página de projetos
-├── IMG/                  # Pasta para logotipos e imagens dos gatos (não fornecidos, mas referenciados)
-├── JS/
-│   └── mascaras.js       # Funções JavaScript para máscaras de input
-├── Cadastro.html         # Página de cadastro/voluntariado
-├── galeria.html          # Página com histórias de sucesso e gatos adotados
-├── index.html            # Página inicial (Home) com a missão da ONG
-└── Projeto.html          # Página detalhando os projetos de Resgate, Cuidados e Adoção
+
 <img width="794" height="293" alt="image" src="https://github.com/user-attachments/assets/df75c12b-726a-4bb4-a2bc-bfaf00f069da" />
 
 🗺️ Mapa de Páginas
