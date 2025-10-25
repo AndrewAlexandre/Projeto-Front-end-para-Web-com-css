@@ -20,6 +20,7 @@ Responsividade (Mobile First): Todos os arquivos CSS incluem blocos de @media qu
 💻 Destaques de Funcionalidade (JavaScript)
 O projeto inclui um script JavaScript dedicado para aprimorar a usabilidade do formulário de cadastro:
 Máscaras de Input: O arquivo mascaras.js aplica automaticamente máscaras de formatação em tempo real para os campos de CPF, Telefone e CEP, facilitando a entrada de dados pelo usuário.
+
 CPF: 000.000.000-00.
 Telefone: (00) 00000-0000 (incluindo o 9º dígito).
 CEP: 00000-000.
