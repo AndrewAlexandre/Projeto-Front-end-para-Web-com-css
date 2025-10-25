@@ -39,6 +39,7 @@ Projeto-Front-end-para-Web-com-css/
 ├── galeria.html          # Página com histórias de sucesso e gatos adotados
 ├── index.html            # Página inicial (Home) com a missão da ONG
 └── Projeto.html          # Página detalhando os projetos de Resgate, Cuidados e Adoção
+<img width="794" height="293" alt="image" src="https://github.com/user-attachments/assets/df75c12b-726a-4bb4-a2bc-bfaf00f069da" />
 
 🗺️ Mapa de Páginas
 Arquivo HTML	Conteúdo Principal	Destaques
